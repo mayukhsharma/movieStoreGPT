@@ -61,13 +61,18 @@ const Login = () => {
 
     const toggleSignInForm = () => {
         setIsSignInForm(!isSignInForm);
+        if (email.current)
+        email.current.value = '';
+        if (password.current)
+        password.current.value = '';
+        setErrorMessage('');
     };
     
     return (
         <div>  
             <Header />
-            <img className="absolute w-full h-full brightness-50" src={Background} alt="background image" />
-            <form onSubmit={(e)=>e.preventDefault()} className="absolute w-[30%] py-8 px-8 my-14 mx-auto left-0 right-0 bg-black text-white rounded-lg bg-opacity-80 shadow-inner shadow-white">
+            <img className="absolute w-screen h-screen object-cover brightness-50" src={Background} alt="background image" />
+            <form onSubmit={(e)=>e.preventDefault()} className="absolute w-full md:w-[30%] py-8 px-8 my-20 md:my-14 mx-auto left-0 right-0 bg-black text-white rounded-lg bg-opacity-80 md:shadow-inner md:shadow-white">
                 <h1 className="font-bold text-3xl py-4">{isSignInForm?'Sign In':'Sign Up'}</h1>
                 {!isSignInForm && <input ref={name} type="text" placeholder="Full Name" className="p-4 my-2 w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg" />}
                 <input ref={email} type="text" placeholder="Email Address" className="p-4 my-2 w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg" />
