@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 
 const Browse = () => {
   const showGptSearch = useSelector(store => store.gpt.showGptSearch);
-  // const showProfileDropDown = useSelector(store => store.profile.showProfileDropDown);
+
   useNowPlayingMovies();
   usePopularMovies();
   useUpcomingMovies();
@@ -20,10 +20,9 @@ const Browse = () => {
   return (
     <div>
       <Header />
-      {/* {showProfileDropDown ? <div className='bg-red-500 p-4 w-1/4 ml-auto text-white'>drop down</div> : <></>} */}
       {showGptSearch ? <GptSearch /> : <><MainContainer /><SecondaryContainer /></>}
     </div>
   )
-}
+};
 
 export default Browse;
