@@ -26,8 +26,10 @@
 -Embedded the youtube vide
 -Build Secondary Component
 -Build Movie list, movie card
--
-# sign up issue-> and popular..
+-usePopularMovies.... custom hooks
+-GPT search feature
+-GPT search bar
+-npm install --save openai
 
 # Features
 -Login/Sign Up
