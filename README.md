@@ -1,4 +1,4 @@
-# Book GPT
+# MovieStoreGPT
 -Create React App
 -Configured Tailwind CSS
 -npm i -D react-router-dom for Routing
@@ -36,11 +36,11 @@
 -Redirect to Browse Page
 -Browse Page(after authentication)
     -Header
-    -Main Book
+    -Main Movie
         -Trailer in Background
         -Title and Description
-    -Books Suggestions
-        -BookLists*N
--BookGPT
+    -Movie Suggestions
+        -MovieList*N
+-MovieGPT
     -Search Bar
-    -Books Suggestion
+    -Movie Suggestion
