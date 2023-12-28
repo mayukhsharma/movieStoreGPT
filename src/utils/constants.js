@@ -5,7 +5,8 @@ export const API_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: ''
+      Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMmE1NTdkNzliMjE4MjE4NmYwYzY1NWRmMGEyMjA4NyIsInN1YiI6IjY1ODg4OThlMmRmZmQ4NWI0MDQ1YWZhOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.b55NBaSyCYa2KduqzhA43r_tPXNwBPxJfzdhb70xM0g",
     }
   };
 export const IMG_CDN = 'https://image.tmdb.org/t/p/w500';
+export const OPENAI_KEY = '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';
