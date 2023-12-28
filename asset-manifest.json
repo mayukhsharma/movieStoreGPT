@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/movieStoreGPT/static/css/main.9c2f2a34.css",
+    "main.js": "/movieStoreGPT/static/js/main.0199595f.js",
+    "static/js/787.8e67c6e9.chunk.js": "/movieStoreGPT/static/js/787.8e67c6e9.chunk.js",
+    "index.html": "/movieStoreGPT/index.html",
+    "main.9c2f2a34.css.map": "/movieStoreGPT/static/css/main.9c2f2a34.css.map",
+    "main.0199595f.js.map": "/movieStoreGPT/static/js/main.0199595f.js.map",
+    "787.8e67c6e9.chunk.js.map": "/movieStoreGPT/static/js/787.8e67c6e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c2f2a34.css",
+    "static/js/main.0199595f.js"
+  ]
+}
