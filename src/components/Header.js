@@ -42,10 +42,14 @@ const Header = () => {
 
   const handleGptSearch = () => {
     dispatch(toggleGptSearchView());
+    dispatch({ type: 'RESET_STATE' });
   }
 
   const handleSearchBar = (e) => {
     e.preventDefault();
+    if(searchFavMovie.current.value==='')
+    {alert("Please enter text in the search!");
+    return;}
     dispatch(toggleSearchBar());
   }
 
@@ -55,6 +59,10 @@ const Header = () => {
       searchFavMovie.current.value = '';
     }
   }
+
+  // const handleOnChangeSearch = () => {
+  //   searchFavMovie.current.value
+  // }
 
   const searchFavMovie = useRef(null);
   const profileName = useSelector(store => store.profile.profileName);
@@ -68,13 +76,13 @@ const Header = () => {
       </div>
       {user && <div className='flex mx-auto md:mx-0'>
       <form onSubmit={handleSearchBar}>
-      <input ref={searchFavMovie} className='bg-gray-50 shadow-inner shadow-black text-gray-900 text-sm rounded-lg py-[9px] px-4 mx-4 my-3 w-80 justify-between flex' type='text' placeholder='Search your favourite movie here<3' />
+      <input ref={searchFavMovie} className='bg-gray-50 shadow-inner shadow-black text-gray-900 text-sm py-[9px] px-4 mx-2 my-3 w-auto' type='text' placeholder='Search your favourite movie here<3' />
       </form>
-      {showSearchBar && <button className='text-white p-1 md:p-2 bg-red-500 hover:bg-opacity-80 rounded-lg my-3' onClick={handleCloseButton}>Close</button>} </div>}
+      {showSearchBar ? <button className='text-white p-1 md:p-2 bg-red-500 hover:bg-opacity-80 rounded-lg my-3' onClick={handleCloseButton}>Close</button> : <button className='text-white p-1 md:p-2 bg-red-500 hover:bg-opacity-80 rounded-lg my-3' onClick={handleSearchBar}>Search</button>} </div>}
       {showSearchBar && <SearchBar movieQuery={searchFavMovie.current.value} />}
       {user && <div className='flex'>
-        {showGptSearch ? <button className='px-4 py-2 whitespace-nowrap bg-gray-500 hover:opacity-80 mx-4 my-3 text-white rounded-lg font-bold' onClick={handleGptSearch}>Welcome to GPT Search</button> : <button className='px-4 py-2 bg-blue-500 bg-gradient-to-r from-indigo-500 mx-4 my-3 hover:opacity-80 text-white rounded-lg font-bold whitespace-nowrap' onClick={handleGptSearch}>GPT Search</button>}
-        <button className='py-2 px-4 bg-blue-500 bg-gradient-to-r from-indigo-500 my-3 mx-4 hover:opacity-80 text-white rounded-lg font-bold ml-auto' onClick={handleSignOut}>Sign out</button>
+      {showGptSearch ? <button className='px-4 py-2 whitespace-nowrap bg-gray-500 hover:opacity-80 mx-4 my-3 text-white rounded-lg font-bold' onClick={handleGptSearch}>Back to Home</button> : <button className='px-4 py-2 bg-blue-500 bg-gradient-to-r from-indigo-500 mx-4 my-3 hover:opacity-80 text-white rounded-lg font-bold whitespace-nowrap' onClick={handleGptSearch}>GPT Search</button>}
+      <button className='py-2 px-4 bg-blue-500 bg-gradient-to-r from-indigo-500 my-3 mx-4 hover:opacity-80 text-white rounded-lg font-bold ml-auto' onClick={handleSignOut}>Sign out</button>
       </div>}
     </div>
   )

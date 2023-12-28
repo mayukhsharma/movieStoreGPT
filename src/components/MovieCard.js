@@ -12,6 +12,9 @@ const MovieCard = ({posterPath, original_title, movie_id}) => {
   const handleOnLeave = () => {
     setOnHover(false);
   };
+  if(!posterPath)
+  return <div className='text-white bg-black h-auto w-auto'>Picture Not Found</div>;
+
   return (
     <div onMouseEnter={handleOnEnter} onMouseLeave={handleOnLeave} className='w-36 md:w-56 mr-8 cursor-pointer hover:border-blue-500 hover:border-2 bg-gray-700 rounded-lg'>
        {onHover ? <><VideoBackground movie_id={movie_id} /> <h1 className='mt-8 mb-4 text-white font-bold text-md md:text-lg text-center'>{original_title}</h1> <MovieDetails movie_id={movie_id} /></> : <><img className='rounded-lg' src={IMG_CDN+posterPath} alt='movie card' />
