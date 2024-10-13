@@ -9,7 +9,7 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCyPHVqfEic8NkVz_c8LY-4I60KtrOHKsE",
+  apiKey: "",
   authDomain: "booknook-bbf58.firebaseapp.com",
   projectId: "booknook-bbf58",
   storageBucket: "booknook-bbf58.appspot.com",
